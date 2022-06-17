@@ -52,7 +52,7 @@ public class Main {
             String sqldate =Date.valueOf(date).toString();
             for(int i=0;i<10;i++) {
                 File f = new File(String.format("target/%s.txt", sqldate));
-                sqldate= addDay(sqldate);
+
 
                 f.delete();
                 DailyHoroscope dailyHoroscope = null;
@@ -66,7 +66,7 @@ public class Main {
                     log.info(dailyHoroscope.toString());
                     System.out.println(dailyHoroscope);
                 }
-
+                sqldate= addDay(sqldate);
 
             }
         };
